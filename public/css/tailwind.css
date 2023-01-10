@@ -1128,12 +1128,24 @@ pre > code .token.content > blockquote {
   position: static !important;
 }
 
+.absolute {
+  position: absolute !important;
+}
+
 .relative {
   position: relative !important;
 }
 
 .top-0 {
   top: 0px !important;
+}
+
+.bottom-5 {
+  bottom: 1.25rem !important;
+}
+
+.left-5 {
+  left: 1.25rem !important;
 }
 
 .col-span-1 {
@@ -1243,6 +1255,11 @@ pre > code .token.content > blockquote {
   height: 5rem !important;
 }
 
+.h-fit {
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
 .w-6 {
   width: 1.5rem !important;
 }
@@ -1253,6 +1270,11 @@ pre > code .token.content > blockquote {
 
 .w-20 {
   width: 5rem !important;
+}
+
+.w-fit {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 
 .max-w-5xl {
@@ -1526,6 +1548,11 @@ pre > code .token.content > blockquote {
   line-height: 1.75rem !important;
 }
 
+.text-base {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
 .font-bold {
   font-weight: 700 !important;
 }
@@ -1563,6 +1590,21 @@ pre > code .token.content > blockquote {
 
 .text-transparent {
   color: transparent !important;
+}
+
+.text-green-300 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(134 239 172 / var(--tw-text-opacity)) !important;
+}
+
+.text-violet-300 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(196 181 253 / var(--tw-text-opacity)) !important;
+}
+
+.text-violet-100 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(237 233 254 / var(--tw-text-opacity)) !important;
 }
 
 .no-underline {
@@ -1675,6 +1717,26 @@ pre > code .token.content > blockquote {
   .md\:rounded-lg {
     border-radius: 0.5rem !important;
   }
+
+  .md\:rounded-t-lg {
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1696,6 +1758,21 @@ pre > code .token.content > blockquote {
   .lg\:py-10 {
     padding-top: 2.5rem !important;
     padding-bottom: 2.5rem !important;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
   }
 }
 
