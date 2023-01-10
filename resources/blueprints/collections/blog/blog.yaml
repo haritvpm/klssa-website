@@ -1,0 +1,125 @@
+title: Blog
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: intro
+        field:
+          always_show_set_button: false
+          buttons:
+            - bold
+            - italic
+            - removeformat
+            - anchor
+          save_html: true
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          type: bard
+          listable: hidden
+          display: Intro
+      -
+        handle: hero_image
+        field:
+          mode: grid
+          container: assets
+          restrict: true
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          listable: hidden
+          display: 'Hero Image'
+      -
+        handle: main_content
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - strikethrough
+            - code
+            - codeblock
+          container: assets
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: true
+          fullscreen: true
+          allow_source: true
+          type: bard
+          listable: hidden
+          display: 'Main Content'
+          sets:
+            code_block:
+              display: 'Code Block'
+              fields: {  }
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          collapse: false
+          previews: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+          validate:
+            - required
+            - 'unique_entry_value:{collection},{id},{site}'
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+      -
+        handle: author
+        field:
+          max_items: 1
+          mode: select
+          type: users
+          listable: true
+          display: Author
+          default: current
+      -
+        handle: hide_from_featured
+        field:
+          default: false
+          display: 'Hide from featured'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

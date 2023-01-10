@@ -1,0 +1,20 @@
+<div class="container mx-auto">
+    <article>
+        <div class="container md:rounded-lg overflow-hidden">
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {{ collection:blog limit="3" sort="date:desc" }}
+
+                <div class="{{ $first ? 'md:col-span-2 md:row-span-2' : 'col-span-1 md:col-start-3' }}">
+
+                    <img src="{{ glide:hero_image}}" class="h-full object-cover" alt="{{ $hero_image:alt }}">
+
+
+                </div>
+
+
+
+
+                {{ /collection:blog }}
+            </section>
+        </div>
+</div>
