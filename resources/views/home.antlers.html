@@ -4,17 +4,28 @@
             <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                 <div class="md:col-span-2 md:row-span-2">
-                    {{ collection:blog limit="1" sort="date:desc" }}
 
-                    <a href="{{ $url }}"
-                        class="transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
 
-                        <img src="{{ glide:hero_image}}" class="h-full object-cover" alt="{{ $hero_image:alt }}">
-                        <h3 class="absolute text-base md:text-md lg:text-lg text-violet-100 w-fit bottom-5 left-5">
-                            {{title}}</h3>
+                    <div class="swiper mySwiper  h-full  ">
+                        <div class="swiper-wrapper ">
+                            {{ collection:blog limit="3" sort="date:desc" }}
 
-                    </a>
-                    {{ /collection:blog }}
+                            <a href="{{ $url }}"
+                                class="swiper-slide transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
+
+                                <img src="{{ glide:hero_image}}" class="h-full object-cover"
+                                    alt="{{ $hero_image:alt }}">
+                                <h3
+                                    class="absolute text-base md:text-md lg:text-lg text-violet-100 w-fit bottom-5 left-5">
+                                    {{title}}</h3>
+
+                            </a>
+                            {{ /collection:blog }}
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
 
                 </div>
 
@@ -51,3 +62,24 @@
             </section>
         </div>
 </div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.mySwiper', {
+        autoHeight: true,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            reverseDirection: true,
+        },
+
+
+    });
+</script>
