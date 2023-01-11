@@ -1,0 +1,38 @@
+<article class="max-w-6xl mx-auto px-3">
+    <header class="mx-auto max-w-xl text-center content">
+        <h1 class="mb-4">{{title}}</h1>
+
+    </header>
+    {{ entries as="posts" paginate="10" sort="date:desc" }}
+
+
+
+    <ul>
+
+        {{ posts }}
+
+        <li class="my-2">
+            <a href="{{url}}">
+                - {{title}}
+            </a>
+        </li>
+        {{ /posts }}
+    </ul>
+
+
+
+
+    {{ paginate }}
+    {{ if $prev_page || $next_page }}
+    <section class="flex space-x-8 justify-center text-xl pt-16 font-bold">
+        {{ if $prev_page }}
+        <a href="{{ $prev_page }}"><span class="squiggle">&larr;</span> Newer</a>
+        {{ /if }}
+        {{ if $next_page }}
+        <a href="{{ $next_page }}">Older<span class="squiggle">&rarr;</span></a>
+        {{ /if }}
+    </section>
+    {{ /if }}
+    {{ /paginate }}
+    {{ /entries }}
+</article>

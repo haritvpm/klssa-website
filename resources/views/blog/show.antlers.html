@@ -1,23 +1,21 @@
 <article class="max-w-5xl mx-auto px-3">
     <header class="mx-auto max-w-3xl text-center content">
-        <h1>{{ $title }}</h1>
+        <h2>{{ $title }}</h2>
         {{ $intro }}
         <div class="my-12 flex items-center justify-center">
-            {{ if $author }}
-            <img src="{{ $author:avatar ?? $author:email | gravatar(160) }}" class="h-20 w-20 my-0 rounded-full mr-4">
-            {{ /if }}
-            <div class="text-left">
-                {{ if author }}
-                <div>
-                    <a class="font-bold no-underline" href="/authors/{{ $author:handle }}">
-                        <span class="bg-clip-text text-transparent bg-gradient-to-r from-hot-pink to-purple-500">
-                            {{ $author:name }}
-                        </span>
-                    </a>
-                </div>
-                {{ /if }}
-                <time datetime="{{ $date | format('Y-m-d') }}">{{ $date }}</time>
-            </div>
+
+
+            {{tags}}
+            <a href="{{url}}"
+                class="no-underline	mx-1 px-2 py-1 text-gray-600 font-bold bg-yellow-300 transition hover:bg-orange-300 rounded-full text-sm">
+                {{title}}
+            </a>
+
+            {{/tags}}
+
+            <time datetime="{{ $date | format('Y-m-d') }}">{{ $date }}</time>
+
+
         </div>
     </header>
     <img class="rounded-xl" src="{{ $hero_image }}" alt="{{ $hero_image:alt }}">
