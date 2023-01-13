@@ -1311,6 +1311,10 @@ pre > code .token.content > blockquote {
   max-width: 42rem !important;
 }
 
+.max-w-7xl {
+  max-width: 80rem !important;
+}
+
 .flex-1 {
   flex: 1 1 0% !important;
 }
@@ -1371,6 +1375,10 @@ pre > code .token.content > blockquote {
 
 .rounded-xl {
   border-radius: 0.75rem !important;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem !important;
 }
 
 .border-b-2 {

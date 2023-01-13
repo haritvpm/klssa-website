@@ -1,6 +1,6 @@
-<div class="container mx-auto">
+<div class="container mx-auto max-w-7xl">
     <article>
-        <div class="container md:rounded-t-lg overflow-hidden">
+        <div class="container mx-auto md:rounded-t-lg overflow-hidden">
             <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                 <div class="md:col-span-2 md:row-span-2">
@@ -19,7 +19,7 @@
                                     class="absolute text-base md:text-md lg:text-lg text-violet-100 w-fit bottom-5 left-5">
                                     {{title}}</h3>
                                 <div
-                                    class="absolute  top-5 right-5 cursor-pointer px-2 py-1 text-gray-600 font-bold bg-yellow-300 transition hover:bg-orange-300 rounded-full text-sm">
+                                    class="absolute  top-5 right-5 cursor-pointer px-2 py-1 text-gray-600 font-bold bg-yellow-300 transition hover:bg-orange-300 rounded-sm text-sm">
                                     വാർത്തകൾ
                                 </div>
 
@@ -34,32 +34,55 @@
                 </div>
 
                 <div class="col-span-1 md:col-start-3">
-                    {{ collection:blog limit="1" sort="date:desc" }}
 
-                    <a href="{{ $url }}"
-                        class="transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
+                    <div class="swiper gallerySlider  h-full  ">
+                        <div class="swiper-wrapper ">
+                            {{ collection:gallery as="gallery" sort="random" }}
 
-                        <img src="{{ glide:hero_image}}" class="h-full object-cover" alt="{{ $hero_image:alt }}">
-                        <h3 class="absolute text-base	md:text-md lg:text-lg text-violet-100 w-fit bottom-5 left-5">
-                            {{title}}</h3>
+                            {{ gallery }}
+                            <a href="/gallery"
+                                class="swiper-slide transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
 
-                    </a>
-                    {{ /collection:blog }}
+                                <img class="h-full w-full object-cover"
+                                    src="{{ glide:thumb height='300' width='500' fit='crop_focal' }}"
+                                    alt="{{ $thumb:alt }}">
+                                <div
+                                    class="absolute  top-5 right-5 cursor-pointer px-2 py-1 text-gray-600 font-bold bg-yellow-300 transition hover:bg-orange-300 rounded-sm text-sm">
+                                    ചിത്രങ്ങൾ
+                                </div>
+                            </a>
 
+                            {{ /gallery }}
+
+                            {{ /collection:gallery }}
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-span-1 md:col-start-3">
-                    {{ collection:blog limit="1" sort="date:desc" }}
 
-                    <a href="{{ $url }}"
-                        class="transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
+                    <div class="swiper gallerySlider2  h-full  ">
+                        <div class="swiper-wrapper ">
+                            {{ collection:gallery as="gallery" sort="random" }}
 
-                        <img src="{{ glide:hero_image}}" class="h-full object-cover" alt="{{ $hero_image:alt }}">
-                        <h3 class="absolute text-base	md:text-md lg:text-lg text-violet-100 w-fit bottom-5 left-5">
-                            {{title}}</h3>
+                            {{ gallery }}
+                            <a href="/gallery"
+                                class="swiper-slide transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
 
-                    </a>
-                    {{ /collection:blog }}
+                                <img class="h-full w-full object-cover"
+                                    src="{{ glide:thumb height='300' width='500' fit='crop_focal' }}"
+                                    alt="{{ $thumb:alt }}">
+                                <div
+                                    class="absolute  top-5 right-5 cursor-pointer px-2 py-1 text-gray-600 font-bold bg-yellow-300 transition hover:bg-orange-300 rounded-sm text-sm">
+                                    ചിത്രങ്ങൾ
+                                </div>
+                            </a>
+
+                            {{ /gallery }}
+
+                            {{ /collection:gallery }}
+                        </div>
+                    </div>
 
                 </div>
 
@@ -71,7 +94,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper('.mySwiper', {
-        autoHeight: true,
+        //  autoHeight: true,
         loop: true,
 
         navigation: {
@@ -87,4 +110,29 @@
 
 
     });
+    const swiper2 = new Swiper('.gallerySlider', {
+        //  autoHeight: true,
+
+
+        autoplay: {
+            delay: 2200,
+
+            reverseDirection: true,
+        },
+
+
+    });
+    const swiper3 = new Swiper('.gallerySlider2', {
+        //  autoHeight: true,
+
+
+        autoplay: {
+            delay: 3000,
+
+            reverseDirection: true,
+        },
+
+
+    });
+
 </script>
