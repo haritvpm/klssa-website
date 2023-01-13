@@ -1,12 +1,9 @@
-title: Blog
-template: blog/show
+title: Gallery
+template: gallery/show
 layout: layout
-mount: 9d226d6e-d537-4550-878f-baadbb52ee11
-taxonomies:
-  - tags
+mount: 4bc0ecf4-f679-4432-9469-d96d569827be
 revisions: false
 route: '/{mount}/{slug}'
-date: true
 sort_dir: asc
 date_behavior:
   past: public

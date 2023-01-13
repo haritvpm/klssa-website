@@ -22,18 +22,26 @@
         </script>
   <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+
+
   {{ partial:personality }}
-  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <script src="{{ mix src='/js/site.js' }}"></script>
 </head>
 
-<body class="bg-white text-black font-body leading-normal personality-{{ $settings:personality }}">
+<body class="bg-white text-black font-body leading-normal personality-{{ $settings:personality }}"
+  x-data="{ showMobileNav: false }">
   {{ partial:nav }}
   <main class="py-2 lg:py-10">
     {{ $template_content }}
   </main>
   {{ partial:footer }}
   {{ partial:extras }}
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </body>
 

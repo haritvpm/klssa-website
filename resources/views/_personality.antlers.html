@@ -1,20 +1,26 @@
 {{ if $settings:personality == "casual" }}
 <style>
-    :root{
-      --font-display: 'Londrina Solid', 'sans-serif' !important;
-      --font-body: 'Poppins', 'sans-serif' !important;
-    }
+  :root {
+    --font-display: 'Londrina Solid', 'sans-serif' !important;
+    --font-body: 'Poppins', 'sans-serif' !important;
+  }
 </style>
-<link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&family=Poppins:ital,wght@0,400;0,600;1,400;1,700&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&family=Poppins:ital,wght@0,400;0,600;1,400;1,700&display=swap"
+  rel="stylesheet">
 {{ /if }}
 
 {{ if $settings:personality == "formal" }}
 <style>
-    :root{
-      --font-display: 'Inter', 'sans-serif' !important;
-      --font-body: 'Inter', 'sans-serif' !important;
-    }
+  :root {
+    --font-display: 'Noto Sans Malayalam', 'sans-serif' !important;
+    --font-body: 'Noto Sans Malayalam', 'sans-serif' !important;
+    font-family: 'Noto Sans Malayalam', sans-serif;
+  }
 </style>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.6.0/inter.min.css" rel="stylesheet">
-{{ /if }}
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@200;400;700&display=swap"
+  rel="stylesheet">
+{{ /if }}

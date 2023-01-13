@@ -1,0 +1,52 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: thumb
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Thumbnail Image'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Select the image to be shown in gallery'
+          max_files: 1
+      -
+        handle: gallery_images
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: Images
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+title: Gallery

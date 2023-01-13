@@ -41,6 +41,10 @@ sections:
           type: assets
           listable: hidden
           display: 'Hero Image'
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          show_filename: true
       -
         handle: main_content
         field:
@@ -123,3 +127,11 @@ sections:
           instructions_position: above
           visibility: visible
           always_save: false
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select
