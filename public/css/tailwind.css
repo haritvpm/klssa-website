@@ -1420,6 +1420,11 @@ pre > code .token.content > blockquote {
   fill: currentColor !important;
 }
 
+.object-contain {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
 .object-cover {
   -o-object-fit: cover !important;
      object-fit: cover !important;
@@ -1485,6 +1490,11 @@ pre > code .token.content > blockquote {
   padding-right: 1rem !important;
 }
 
+.px-1 {
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
+}
+
 .pt-12 {
   padding-top: 3rem !important;
 }
@@ -1495,6 +1505,10 @@ pre > code .token.content > blockquote {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
 }
 
 .font-display {
@@ -1545,6 +1559,11 @@ pre > code .token.content > blockquote {
   line-height: 1 !important;
 }
 
+.text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+}
+
 .font-bold {
   font-weight: 700 !important;
 }
@@ -1555,6 +1574,10 @@ pre > code .token.content > blockquote {
 
 .font-black {
   font-weight: 900 !important;
+}
+
+.font-extralight {
+  font-weight: 200 !important;
 }
 
 .uppercase {
