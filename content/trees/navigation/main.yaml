@@ -7,6 +7,14 @@ tree:
     id: 540da2ee-48dd-44b3-ad80-81b88b1f873a
     entry: 9d226d6e-d537-4550-878f-baadbb52ee11
   -
+    id: e0441863-42d8-4f53-b8fd-f143c0fef043
+    entry: 1e846a59-4286-4001-9cb9-45026556f7c0
+    children:
+      -
+        id: ab44c0cd-0693-41c1-94c4-ff31633fff4f
+        entry: 1e846a59-4286-4001-9cb9-45026556f7c0
+        title: 'സംഘടനാ ചരിത്രം'
+  -
     id: f55b1aea-239c-4db5-8967-1b26df412814
     entry: e1bd43b2-4f38-48c7-be42-f91e8734852a
     children:

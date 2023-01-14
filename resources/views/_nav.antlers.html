@@ -1,4 +1,4 @@
-<nav x-data="{searching: false}" class="bg-red-600 opacity-90 text-white">
+<nav x-data="{searching: false}" class="bg-red-600 opacity-95 text-white">
     <div class="mx-auto px-3 py-3 flex items-center justify-between flex-wrap">
         <a href="/" class="mr-12 antialiased block text-xl lg:inline-block  font-bold text-md hover:text-yellow-400"
             x-show="! searching">{{
@@ -24,7 +24,7 @@
             </button>
         </div>
 
-        <div class="w-full lg:w-auto lg:flex  items-center justify-end" @click.outside="showMobileNav = false"
+        <div class="w-full lg:w-auto lg:flex  items-center justify-end @click.outside=" showMobileNav=false"
             x-show="showMobileNav">
 
             {{ nav:main }}
@@ -43,7 +43,7 @@
                     </a>
 
                     <ul
-                        class="lg:absolute bg-red-600 lg:p-3 lg:w-52 lg:top-6 transform lg:scale-0   group-hover:scale-100 transition duration-150 ease-in-out origin-top lg:shadow-lg">
+                        class="hover:z-1000  lg:absolute bg-red-600 lg:p-3 lg:w-52 lg:top-6 transform lg:scale-0   group-hover:scale-100 transition duration-150 ease-in-out origin-top lg:shadow-lg">
                         {{ *recursive children* }}
                     </ul>
                 </li>
