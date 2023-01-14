@@ -9,7 +9,7 @@
 
                     <div class="swiper mySwiper  h-full  ">
                         <div class="swiper-wrapper ">
-                            {{ collection:blog limit="3" sort="date:desc" }}
+                            {{ collection:blog limit="3" taxonomy:category="news" sort="date:desc" }}
 
                             <a href="{{ $url }}"
                                 class="swiper-slide h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">

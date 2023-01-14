@@ -7,13 +7,26 @@ tree:
     id: 540da2ee-48dd-44b3-ad80-81b88b1f873a
     entry: 9d226d6e-d537-4550-878f-baadbb52ee11
   -
+    id: f9715254-30c5-4c55-a040-a08c3630079a
+    title: പ്രക്ഷോഭങ്ങൾ
+    url: /news/category/agitation
+  -
     id: e0441863-42d8-4f53-b8fd-f143c0fef043
     entry: 1e846a59-4286-4001-9cb9-45026556f7c0
     children:
       -
+        id: 7fd3b288-ada1-430f-a5b4-7f76cc1a035c
+        entry: f988036f-be20-48ee-8acc-6370b37636c3
+      -
         id: ab44c0cd-0693-41c1-94c4-ff31633fff4f
         entry: 1e846a59-4286-4001-9cb9-45026556f7c0
-        title: 'സംഘടനാ ചരിത്രം'
+        title: ചരിത്രം
+      -
+        id: f3fd247b-e95c-4af4-aa8d-0f00b548d79a
+        entry: 1b86df7a-01b2-41c8-8f3a-201c325c3c27
+  -
+    id: 62b45b4a-248a-4726-8a33-e3fd5c4b06dc
+    entry: ed96ddbe-1375-46f2-8f09-d9eb75d40aa0
   -
     id: f55b1aea-239c-4db5-8967-1b26df412814
     entry: e1bd43b2-4f38-48c7-be42-f91e8734852a

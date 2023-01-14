@@ -2,3 +2,12 @@ name: hari
 super: true
 id: 0e9ced9a-2063-4cb9-9e8a-9bca000c08f7
 password_hash: $2y$10$jEJuQuNPH0QrDudIXvRvFO4TrwI/upKILxTjEK6a6bNdJ2NLJu5BS
+preferences:
+  collections:
+    blog:
+      columns:
+        - title
+        - slug
+        - date
+        - author
+        - category

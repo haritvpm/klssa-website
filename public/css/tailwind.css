@@ -1128,10 +1128,6 @@ pre > code .token.content > blockquote {
   position: static !important;
 }
 
-.fixed {
-  position: fixed !important;
-}
-
 .absolute {
   position: absolute !important;
 }
@@ -1164,12 +1160,12 @@ pre > code .token.content > blockquote {
   right: 1.25rem !important;
 }
 
-.z-10 {
-  z-index: 10 !important;
-}
-
 .z-50 {
   z-index: 50 !important;
+}
+
+.z-10 {
+  z-index: 10 !important;
 }
 
 .col-span-1 {
@@ -1290,10 +1286,6 @@ pre > code .token.content > blockquote {
   height: 100% !important;
 }
 
-.h-auto {
-  height: auto !important;
-}
-
 .w-6 {
   width: 1.5rem !important;
 }
@@ -1311,16 +1303,20 @@ pre > code .token.content > blockquote {
   width: fit-content !important;
 }
 
+.max-w-sm {
+  max-width: 24rem !important;
+}
+
 .max-w-3xl {
   max-width: 48rem !important;
 }
 
-.max-w-7xl {
-  max-width: 80rem !important;
-}
-
 .max-w-5xl {
   max-width: 64rem !important;
+}
+
+.max-w-7xl {
+  max-width: 80rem !important;
 }
 
 .max-w-6xl {
@@ -1355,8 +1351,16 @@ pre > code .token.content > blockquote {
   grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
 }
 
+.flex-col {
+  flex-direction: column !important;
+}
+
 .flex-wrap {
   flex-wrap: wrap !important;
+}
+
+.items-start {
+  align-items: flex-start !important;
 }
 
 .items-center {
@@ -1373,6 +1377,10 @@ pre > code .token.content > blockquote {
 
 .justify-between {
   justify-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
 }
 
 .gap-4 {
@@ -1407,10 +1415,6 @@ pre > code .token.content > blockquote {
 
 .rounded-full {
   border-radius: 9999px !important;
-}
-
-.border {
-  border-width: 1px !important;
 }
 
 .border-b-2 {
@@ -1544,6 +1548,14 @@ pre > code .token.content > blockquote {
 
 .pt-16 {
   padding-top: 4rem !important;
+}
+
+.pt-5 {
+  padding-top: 1.25rem !important;
+}
+
+.text-left {
+  text-align: left !important;
 }
 
 .text-center {
@@ -1691,10 +1703,6 @@ pre > code .token.content > blockquote {
   -moz-osx-font-smoothing: grayscale !important;
 }
 
-.opacity-90 {
-  opacity: 0.9 !important;
-}
-
 .opacity-95 {
   opacity: 0.95 !important;
 }
@@ -1781,10 +1789,6 @@ pre > code .token.content > blockquote {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color) !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
-}
-
-.group:hover .group-hover\:block {
-  display: block !important;
 }
 
 .group:hover .group-hover\:scale-100 {

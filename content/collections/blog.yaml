@@ -4,6 +4,7 @@ layout: layout
 mount: 9d226d6e-d537-4550-878f-baadbb52ee11
 taxonomies:
   - tags
+  - category
 revisions: false
 route: '/{mount}/{slug}'
 date: true
