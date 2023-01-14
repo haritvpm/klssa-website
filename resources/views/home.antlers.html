@@ -1,6 +1,8 @@
 <div class="container mx-auto max-w-7xl">
     <article>
         <div class="container mx-auto md:rounded-t-lg overflow-hidden">
+
+
             <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                 <div class="md:col-span-2 md:row-span-2">
@@ -35,13 +37,13 @@
 
                 <div class="col-span-1 md:col-start-3">
 
-                    <div class="swiper gallerySlider  h-full  ">
+                    <div class=" swiper gallerySlider  h-full  ">
                         <div class="swiper-wrapper ">
                             {{ collection:gallery as="gallery" sort="random" }}
 
                             {{ gallery }}
                             <a href="/gallery"
-                                class="swiper-slide transition-all duration-75 ease-in-out h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
+                                class="swiper-slide transition-all duration-75 ease-in-out h-full block relative hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
 
                                 <img class="h-full w-full object-cover"
                                     src="{{ glide:thumb height='300' width='500' fit='crop_focal' }}"
@@ -96,7 +98,7 @@
     const swiper = new Swiper('.mySwiper', {
         //  autoHeight: true,
         loop: true,
-
+        cssMode: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -112,10 +114,11 @@
     });
     const swiper2 = new Swiper('.gallerySlider', {
         //  autoHeight: true,
-
+        loop: true,
+        cssMode: true,
 
         autoplay: {
-            delay: 2200,
+            delay: 4200,
 
             reverseDirection: true,
         },
@@ -124,10 +127,11 @@
     });
     const swiper3 = new Swiper('.gallerySlider2', {
         //  autoHeight: true,
-
+        loop: true,
+        cssMode: true,
 
         autoplay: {
-            delay: 3000,
+            delay: 5600,
 
             reverseDirection: true,
         },

@@ -1210,6 +1210,10 @@ pre > code .token.content > blockquote {
   margin-right: 3rem !important;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
 .mr-5 {
   margin-right: 1.25rem !important;
 }
@@ -1295,6 +1299,10 @@ pre > code .token.content > blockquote {
   max-width: 48rem !important;
 }
 
+.max-w-7xl {
+  max-width: 80rem !important;
+}
+
 .max-w-5xl {
   max-width: 64rem !important;
 }
@@ -1311,12 +1319,16 @@ pre > code .token.content > blockquote {
   max-width: 42rem !important;
 }
 
-.max-w-7xl {
-  max-width: 80rem !important;
-}
-
 .flex-1 {
   flex: 1 1 0% !important;
+}
+
+.origin-top {
+  transform-origin: top !important;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
 .cursor-pointer {
@@ -1369,16 +1381,16 @@ pre > code .token.content > blockquote {
   border-radius: 0.25rem !important;
 }
 
-.rounded-full {
-  border-radius: 9999px !important;
+.rounded-sm {
+  border-radius: 0.125rem !important;
 }
 
 .rounded-xl {
   border-radius: 0.75rem !important;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem !important;
+.rounded-full {
+  border-radius: 9999px !important;
 }
 
 .border-b-2 {
@@ -1426,11 +1438,6 @@ pre > code .token.content > blockquote {
 
 .fill-current {
   fill: currentColor !important;
-}
-
-.object-contain {
-  -o-object-fit: contain !important;
-     object-fit: contain !important;
 }
 
 .object-cover {
@@ -1498,9 +1505,12 @@ pre > code .token.content > blockquote {
   padding-right: 1rem !important;
 }
 
-.px-1 {
+.pt-3 {
+  padding-top: 0.75rem !important;
+}
+
+.pl-1 {
   padding-left: 0.25rem !important;
-  padding-right: 0.25rem !important;
 }
 
 .pt-12 {
@@ -1513,10 +1523,6 @@ pre > code .token.content > blockquote {
 
 .text-center {
   text-align: center !important;
-}
-
-.text-right {
-  text-align: right !important;
 }
 
 .font-display {
@@ -1562,14 +1568,14 @@ pre > code .token.content > blockquote {
   line-height: 1rem !important;
 }
 
-.text-5xl {
-  font-size: 3rem !important;
-  line-height: 1 !important;
-}
-
 .text-3xl {
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
+}
+
+.text-5xl {
+  font-size: 3rem !important;
+  line-height: 1 !important;
 }
 
 .font-bold {
@@ -1580,16 +1586,20 @@ pre > code .token.content > blockquote {
   font-weight: 500 !important;
 }
 
-.font-black {
-  font-weight: 900 !important;
-}
-
 .font-extralight {
   font-weight: 200 !important;
 }
 
+.font-black {
+  font-weight: 900 !important;
+}
+
 .uppercase {
   text-transform: uppercase !important;
+}
+
+.leading-8 {
+  line-height: 2rem !important;
 }
 
 .leading-none {
@@ -1647,6 +1657,10 @@ pre > code .token.content > blockquote {
   text-decoration-line: none !important;
 }
 
+.underline-offset-2 {
+  text-underline-offset: 2px !important;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -1671,17 +1685,21 @@ pre > code .token.content > blockquote {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+}
+
 .transition-all {
   transition-property: all !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition-duration: 150ms !important;
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+.duration-150 {
   transition-duration: 150ms !important;
 }
 
@@ -1726,16 +1744,30 @@ pre > code .token.content > blockquote {
   color: rgb(55 48 163 / var(--tw-text-opacity)) !important;
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline !important;
+}
+
 .hover\:shadow-xl:hover {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color) !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
 
+.group:hover .group-hover\:scale-100 {
+  --tw-scale-x: 1 !important;
+  --tw-scale-y: 1 !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+
 @media (min-width: 640px) {
 
   .sm\:hidden {
     display: none !important;
+  }
+
+  .sm\:indent-8 {
+    text-indent: 2rem !important;
   }
 }
 
@@ -1798,6 +1830,22 @@ pre > code .token.content > blockquote {
 
 @media (min-width: 1024px) {
 
+  .lg\:absolute {
+    position: absolute !important;
+  }
+
+  .lg\:relative {
+    position: relative !important;
+  }
+
+  .lg\:top-6 {
+    top: 1.5rem !important;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px !important;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px !important;
   }
@@ -1822,8 +1870,22 @@ pre > code .token.content > blockquote {
     width: auto !important;
   }
 
+  .lg\:w-52 {
+    width: 13rem !important;
+  }
+
+  .lg\:scale-0 {
+    --tw-scale-x: 0 !important;
+    --tw-scale-y: 0 !important;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .lg\:p-3 {
+    padding: 0.75rem !important;
   }
 
   .lg\:py-12 {
@@ -1841,6 +1903,10 @@ pre > code .token.content > blockquote {
     padding-bottom: 5rem !important;
   }
 
+  .lg\:indent-0 {
+    text-indent: 0px !important;
+  }
+
   .lg\:text-lg {
     font-size: 1.125rem !important;
     line-height: 1.75rem !important;
@@ -1849,6 +1915,12 @@ pre > code .token.content > blockquote {
   .lg\:text-2xl {
     font-size: 1.5rem !important;
     line-height: 2rem !important;
+  }
+
+  .lg\:shadow-lg {
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color) !important;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
   }
 }
 

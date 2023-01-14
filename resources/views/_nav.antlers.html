@@ -28,11 +28,45 @@
             x-show="showMobileNav">
 
             {{ nav:main }}
-            <a href="{{ url }}"
-                class="block {{ is_current || is_parent ?= 'font-medium text-gray-100' }} mt-4 lg:inline-block text-gray-100 hover:text-yellow-100 lg:mt-0 mr-5">
-                {{ title }}
-            </a>
+
+            <ul>
+
+                {{ if depth == 1 }}
+
+
+                {{ if children }}
+
+                <li class="lg:flex  lg:relative group ">
+                    <a href="{{ url }}"
+                        class="block {{ is_current || is_parent ?= 'font-medium text-gray-100' }} mb-2 lg:mb-0 mt-4 lg:inline-block text-gray-100 hover:text-yellow-100 lg:mt-0 mr-5">
+                        {{ title }}<i class="fa-solid fa-chevron-down fa-2xs pt-3 pl-1"></i>
+                    </a>
+
+                    <ul
+                        class="lg:absolute bg-red-600 lg:p-3 lg:w-52 lg:top-6 transform lg:scale-0   group-hover:scale-100 transition duration-150 ease-in-out origin-top lg:shadow-lg">
+                        {{ *recursive children* }}
+                    </ul>
+                </li>
+                {{ else }}
+                <li>
+                    <a href="{{ url }}"
+                        class="block mt-4 lg:inline-block text-gray-100 hover:text-yellow-100 lg:mt-0 mr-5 hover:underline underline-offset-2">
+                        {{ title }}
+                    </a>
+                </li>
+                {{ /if }}
+
+                {{ elseif depth == 2 }}
+                <li class=" sm:indent-8 lg:indent-0 text-sm hover:text-yellow-400 leading-8">
+                    <a href="{{ url }}" class="block  lg:inline-block text-gray-100 hover:underline underline-offset-2">
+                        {{ title }}
+                    </a>
+                </li>
+                {{ /if }}
+            </ul>
             {{ /nav:main }}
+
+
 
             <button class="sm:hidden lg:block hover:text-yellow-400 transition-all duration-100 outline-none"
                 @click="searching = true; $nextTick(() => { $refs.search.focus() })" aria-label="Search the site">
