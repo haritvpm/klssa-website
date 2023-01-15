@@ -6,13 +6,14 @@
 
 
 
-    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-8">
+    <section class="flex flex-wrap justify-center gap-6 py-8">
         {{ gallery_images }}
 
-        <div>
-            <a href="{{ glide:url }}" class="glightbox" data-width="100vw" data-height="auto" data-zoomable="true"
-                data-type="image">
-                <img src="{{ glide:url }}" alt="{{ alt }}">
+        <div
+            class="w-[250px] h-[250px] rounded-xl shadow-lg overflow-hidden transition-all duration-75 ease-in-out h-full  relative top-0 hover:-top-2  hover:shadow-xl">
+            <a href="{{ glide:url }}" class="glightbox h-full w-full " data-width="100vw" data-height="auto"
+                data-zoomable="true" data-type="image">
+                <img class="h-full w-full object-cover overflow-hidden" src="{{ glide:url }}" alt="{{ alt }}">
             </a>
         </div>
 
