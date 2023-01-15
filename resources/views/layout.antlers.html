@@ -33,7 +33,7 @@
   <script src="{{ mix src='/js/site.js' }}"></script>
 </head>
 
-<body class="bg-white text-black font-body leading-normal personality-{{ $settings:personality }}"
+<body class="flex flex-col min-h-screen text-black font-body leading-normal personality-{{ $settings:personality }}"
   x-data="{ showMobileNav: false }">
 
   <header class="sticky z-50 top-0">
@@ -43,12 +43,13 @@
     {{ $template_content }}
   </main>
 
-  {{if current_template !== 'gallery/show'}}
-  {{ partial:footer }}
-  {{/if}}
+  <footer class="mt-auto">
+    {{if current_template !== 'gallery/show'}}
+    {{ partial:footer }}
+    {{/if}}
+  </footer>
 
-
-  <!-- {{ partial:extras }} -->
+  {{ partial:extras }}
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 

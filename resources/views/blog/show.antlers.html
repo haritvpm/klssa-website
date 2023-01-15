@@ -23,8 +23,7 @@
         {{ main_content }}
         {{ if $type == "text" }}
         {{ $text }}
-        <!--   {{ elseif $type == "code_block" }}
-        <pre class="language-{{ $mode ?? 'php' }} rounded"><code>{{ $code }}</code></pre> -->
+
         {{ elseif $type == "image" }}
         <figure>
             <img src="{{ $image }}" alt="{{ $caption }}" />
@@ -33,8 +32,8 @@
         {{ /if }}
         {{ /main_content }}
     </section>
-
+    {{#
     {{ if $settings:show_signup }}
     {{ partial:sign-up}}
-    {{ /if }}
+    {{ /if }} #}}
 </article>

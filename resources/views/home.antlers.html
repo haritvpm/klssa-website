@@ -1,6 +1,6 @@
-<div class="container mx-auto max-w-7xl">
+<div class="container mx-auto max-w-7xl 	">
     <article>
-        <div class="md:rounded-t-lg">
+        <div class="md:rounded-t-lg ">
 
             <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
@@ -9,7 +9,7 @@
 
                     <div class="swiper mySwiper  h-full  ">
                         <div class="swiper-wrapper ">
-                            {{ collection:blog limit="3" taxonomy:category="news" sort="date:desc" }}
+                            {{ collection:blog limit="5" taxonomy:category="news|agitation" sort="date:desc" }}
 
                             <a href="{{ $url }}"
                                 class="swiper-slide h-full block relative top-0 hover:-top-2 shadow-lg hover:shadow-xl bg-white overflow-hidden">
@@ -21,7 +21,7 @@
                                     {{title}}</h3>
                                 <div
                                     class="absolute  top-5 right-5 cursor-pointer px-2 py-1 text-gray-600 font-bold bg-yellow-300 transition hover:bg-orange-300 rounded-sm text-sm">
-                                    വാർത്തകൾ
+                                    {{category:0:title}}
                                 </div>
 
                             </a>

@@ -1,23 +1,18 @@
 <article class="max-w-6xl mx-auto px-3">
     <header class="mx-auto max-w-xl text-center content">
-        <h1 class="mb-4">{{title}}</h1>
+        <h1 class="font-extralight	 mb-4">#{{title}}</h1>
 
     </header>
     {{ entries as="posts" paginate="10" sort="date:desc" }}
 
 
-
-    <ul>
-
+    <section class="flex flex-col flex-wrap py-2">
         {{ posts }}
 
-        <li class="my-2">
-            <a href="{{url}}">
-                - {{title}}
-            </a>
-        </li>
+        {{ partial:blog/card-sm-horiz }}
+
         {{ /posts }}
-    </ul>
+    </section>
 
 
 
