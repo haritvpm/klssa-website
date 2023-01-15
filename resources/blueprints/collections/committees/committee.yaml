@@ -1,0 +1,153 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: content
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: content
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: members
+        field:
+          collapse: accordion
+          previews: true
+          sets:
+            memberdetail:
+              display: MemberDetail
+              fields:
+                -
+                  handle: name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: name
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: designation
+                  field:
+                    options:
+                      president: പ്രസിഡന്റ്
+                      gen-secretary: 'ജന. സെക്രട്ടറി'
+                      secretary: സെക്രട്ടറി
+                      vice-president: 'വൈ. പ്രസിഡന്റ്'
+                      treasurer: ട്രഷറര്‍
+                      member: അംഗം
+                    multiple: false
+                    clearable: true
+                    searchable: true
+                    taggable: false
+                    push_tags: false
+                    cast_booleans: false
+                    default: member
+                    display: designation
+                    type: select
+                    icon: select
+                    listable: true
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: photo
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: photo
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: Members
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: committee-type
+        field:
+          type: terms
+          taxonomies:
+            - committee-type
+          display: CommitteeType
+          mode: select
+      -
+        handle: year
+        field:
+          mode: single
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Date Field'
+          type: date
+          icon: date
+          instructions: 'Select year of this committee'
+          listable: true
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: ordinal_number
+        field:
+          display: 'Ordinal Number'
+          type: integer
+          icon: integer
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: venue
+        field:
+          input_type: text
+          antlers: false
+          display: Venue
+          type: text
+          icon: text
+          instructions: 'Venue of the annual committee'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+title: Committee

@@ -19,4 +19,4 @@ sections:
           required: true
           validate:
             - required
-title: Category
+title: CommitteeType

@@ -1,0 +1,5 @@
+title: CommitteeType
+preview_targets:
+  -
+    label: Term
+    url: '{permalink}'

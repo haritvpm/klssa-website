@@ -1,0 +1,23 @@
+<article class="max-w-xl mx-auto px-3">
+    <header class="mx-auto max-w-xl text-center content">
+        <h2 class="mb-2 underline">{{title}}</h2>
+
+    </header>
+    <section class="flex flex-col items-center">
+        {{ collection:committees as="committee" offset="1" taxonomy:committee-type="executive" sort="date:desc" }}
+
+        {{ committee }}
+
+        <div class="mb-2">
+            <a href="{{ $url }}" class="text-md hover:text-teal-500 tracking-tight leading-tight font-bold">
+                {{ title }}
+            </a>
+        </div>
+
+        {{ /committee }}
+
+
+
+        {{ /collection:committees }}
+    </section>
+</article>

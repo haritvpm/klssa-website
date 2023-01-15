@@ -1,0 +1,16 @@
+title: Committees
+template: committees/show
+layout: layout
+taxonomies:
+  - committee-type
+revisions: false
+route: '{slug}'
+date: true
+sort_dir: desc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'

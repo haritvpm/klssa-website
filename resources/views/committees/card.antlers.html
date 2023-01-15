@@ -1,0 +1,15 @@
+<div
+    class="flex flex-col justify-center items-center p-3 m-2 shadow-lg bg-gray-200 rounded-xl overflow-hidden transition-all duration-75 ease-in-out">
+
+    <img class="rounded-xl hover:scale-105 " src="{{ glide:photo height='200' width='150' fit='crop_focal' }}"
+        alt="{{ $photo:alt }}">
+    <div class=" py-2 px-2 text-center ">
+
+        <p class="text-base leading-tight">
+            {{ $name }}
+        </p>
+        <p class="text-base font-extralight text-gray-600 ">
+            {{ $designation:label }}
+        </p>
+    </div>
+</div>
