@@ -6,7 +6,7 @@ taxonomies:
   - tags
   - category
 revisions: false
-route: '/{mount}/{slug}'
+route: '{slug}'
 date: true
 sort_dir: asc
 date_behavior:

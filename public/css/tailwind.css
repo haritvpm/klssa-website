@@ -1319,6 +1319,10 @@ pre > code .token.content > blockquote {
   width: 250px !important;
 }
 
+.w-\[350px\] {
+  width: 350px !important;
+}
+
 .max-w-sm {
   max-width: 24rem !important;
 }
