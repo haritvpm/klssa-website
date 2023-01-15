@@ -42,8 +42,13 @@
   <main class="relative py-2 lg:py-10">
     {{ $template_content }}
   </main>
+
+  {{if current_template !== 'gallery/show'}}
   {{ partial:footer }}
-  {{ partial:extras }}
+  {{/if}}
+
+
+  <!-- {{ partial:extras }} -->
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
