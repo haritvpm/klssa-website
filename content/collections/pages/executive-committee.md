@@ -4,7 +4,7 @@ blueprint: pages
 title: 'നിർവ്വാഹക സമിതി'
 author: 0e9ced9a-2063-4cb9-9e8a-9bca000c08f7
 updated_by: 0e9ced9a-2063-4cb9-9e8a-9bca000c08f7
-updated_at: 1673793038
-template: managing-comm
+updated_at: 1673833984
+template: committees/managing
 ---
 നിർവ്വാഹക സമിതി

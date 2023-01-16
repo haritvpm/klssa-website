@@ -1,0 +1,43 @@
+<article class="max-w-5xl mx-auto px-3">
+
+    <section class=" py-1 lg:py-2 content">
+        {{ collection:committees sort="date:desc" limit='1' }}
+
+        <header class="mx-auto max-w-3xl text-center content">
+            <h2>{{ $title }}</h2>
+
+        </header>
+
+        <div class="flex flex-wrap justify-center">
+            {{ members }}
+            {{if $designation:key == 'president' or $designation:key == 'gen-secretary' or $designation:key ==
+            'treasurer' }}
+            {{ partial:committees/card }}
+            {{/if}}
+            {{ /members }}
+        </div>
+        <div class="flex flex-wrap justify-center">
+
+            {{ members }}
+            {{if $designation:key == 'vice-president' or $designation:key == 'secretary' }}
+            {{ partial:committees/card }}
+            {{/if}}
+            {{ /members }}
+
+        </div>
+        <div class="flex flex-wrap justify-center">
+
+            {{ members }}
+            {{if $designation:key == 'member' }}
+            {{ partial:committees/card }}
+            {{/if}}
+            {{ /members }}
+
+        </div>
+        {{ /collection:committees }}
+    </section>
+    {{#
+    {{ if $settings:show_signup }}
+    {{ partial:sign-up}}
+    {{ /if }} #}}
+</article>

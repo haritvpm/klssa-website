@@ -1,13 +1,11 @@
 <article class="max-w-5xl mx-auto px-3">
+    <header class="mx-auto max-w-3xl text-center content">
+        <h2>{{ $title }}</h2>
 
-    <section class=" py-1 lg:py-2 content">
-        {{ collection:committees taxonomy:committee-type="executive" sort="date:desc" limit='1' }}
+    </header>
 
-        <header class="mx-auto max-w-3xl text-center content">
-            <h2>{{ $title }}</h2>
-
-        </header>
-
+    <section class=" py-6 lg:py-12 content">
+        {{ $content }}
         <div class="flex flex-wrap justify-center">
             {{ members }}
             {{if $designation:key == 'president' or $designation:key == 'gen-secretary' or $designation:key ==
@@ -34,10 +32,6 @@
             {{ /members }}
 
         </div>
-        {{ /collection:committees }}
     </section>
-    {{#
-    {{ if $settings:show_signup }}
-    {{ partial:sign-up}}
-    {{ /if }} #}}
+
 </article>

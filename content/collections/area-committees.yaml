@@ -1,10 +1,12 @@
-title: Committees
-template: committees/show
+title: AreaCommittees
+template: area-committees/show
 layout: layout
+taxonomies:
+  - committee-type
 revisions: false
 route: '{slug}'
 date: true
-sort_dir: desc
+sort_dir: asc
 date_behavior:
   past: public
   future: private

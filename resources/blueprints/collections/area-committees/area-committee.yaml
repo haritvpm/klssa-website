@@ -12,23 +12,12 @@ sections:
       -
         handle: content
         field:
-          restrict: false
-          automatic_line_breaks: true
-          automatic_links: false
-          escape_markup: false
-          smartypants: false
-          antlers: false
-          display: content
           type: markdown
-          icon: markdown
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
+          localizable: true
       -
         handle: members
         field:
-          collapse: accordion
+          collapse: false
           previews: true
           sets:
             memberdetail:
@@ -45,26 +34,20 @@ sections:
                     display: Member
                     type: entries
                     icon: entries
-                    listable: true
+                    listable: hidden
                     instructions_position: above
                     visibility: visible
                     always_save: false
-                    validate:
-                      - required
                 -
                   handle: designation
                   field:
                     options:
-                      president: പ്രസിഡന്റ്
-                      gen-secretary: 'ജന. സെക്രട്ടറി'
-                      secretary: സെക്രട്ടറി
-                      vice-president: 'വൈ. പ്രസിഡന്റ്'
-                      treasurer: ട്രഷറര്‍
-                      member: അംഗം
                       convenor: കൺവീനർ
                       joint-convenor: 'ജോ. കൺവീനർ'
+                      member: അംഗം
                     multiple: false
-                    clearable: true
+                    max_items: 1
+                    clearable: false
                     searchable: true
                     taggable: false
                     push_tags: false
@@ -73,7 +56,7 @@ sections:
                     display: designation
                     type: select
                     icon: select
-                    listable: true
+                    listable: hidden
                     instructions_position: above
                     visibility: visible
                     always_save: false
@@ -93,51 +76,26 @@ sections:
           type: slug
           localizable: true
       -
-        handle: year
-        field:
-          mode: single
-          time_enabled: false
-          time_seconds_enabled: false
-          full_width: false
-          inline: false
-          columns: 1
-          rows: 1
-          display: FormedDate
-          type: date
-          icon: date
-          instructions: 'Select year of this committee'
-          listable: true
-          instructions_position: above
-          visibility: visible
-          always_save: false
-      -
-        handle: ordinal_number
-        field:
-          display: 'Ordinal Number'
-          type: integer
-          icon: integer
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
-      -
-        handle: venue
-        field:
-          input_type: text
-          antlers: false
-          display: Venue
-          type: text
-          icon: text
-          instructions: 'Venue of the annual committee'
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          always_save: false
-      -
         handle: date
         field:
           type: date
           required: true
           validate:
             - required
-title: Committee
+      -
+        handle: committee-type
+        field:
+          type: terms
+          taxonomies:
+            - committee-type
+          display: AreaCommitteeType
+          mode: select
+          instructions_position: above
+          listable: true
+          visibility: visible
+          always_save: false
+          create: true
+          validate:
+            - required
+          max_items: 1
+title: AreaCommittee

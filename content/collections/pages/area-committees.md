@@ -4,6 +4,7 @@ blueprint: pages
 title: ഏരിയകമ്മിറ്റികൾ
 author: 0e9ced9a-2063-4cb9-9e8a-9bca000c08f7
 updated_by: 0e9ced9a-2063-4cb9-9e8a-9bca000c08f7
-updated_at: 1673711172
+updated_at: 1673839597
+template: area-committees/index
 ---
 ഏരിയകമ്മിറ്റികൾ

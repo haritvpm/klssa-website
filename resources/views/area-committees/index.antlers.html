@@ -1,0 +1,35 @@
+<article class="max-w-7xl mx-auto px-3">
+    <header class="mx-auto max-w-xl text-center content">
+        <h2 class="mb-2 font-extralight	">ഏരിയകമ്മിറ്റി-{{date format="Y" }}</h2>
+
+    </header>
+
+    <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-2 py-2">
+
+        <div>{{ partial:area-committees/area area="area-admin"}}</div>
+        <div>{{ partial:area-committees/area area="area-assembly"}}</div>
+        <div>{{ partial:area-committees/area area="area-hostel"}}</div>
+    </div>
+
+    <hr class="mt-10 ">
+    <h3 class="text-lg mb-2 underline flex justify-center">മുൻ{{title}}</h3>
+
+
+    <section class="flex flex-col md:items-center">
+        {{ collection:area-committees as="committee" offset="3" sort="date:desc" }}
+
+        {{ committee }}
+
+        <div class="mb-2">
+            <a href="{{ $url }}" class="text-md hover:text-teal-500 tracking-tight leading-tight font-bold">
+                {{ title }}, {{date format="Y" }}
+            </a>
+        </div>
+
+        {{ /committee }}
+
+
+
+        {{ /collection:area-committees }}
+    </section>
+</article>
