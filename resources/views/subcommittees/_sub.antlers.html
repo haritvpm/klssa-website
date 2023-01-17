@@ -1,0 +1,39 @@
+<section class=" py-1 lg:py-2 content flex flex-col items-center">
+
+
+    <header class="mx-auto   text-center content">
+        <h3 class="font-bold ">ഭാരവാഹികൾ</h3>
+        {{ $content }}
+    </header>
+
+    <div class="flex flex-wrap justify-center">
+        {{ members }}
+        {{if $designation:key == 'convenor' or $designation:key == 'joint-convenor' }}
+        {{ partial:committees/card }}
+        {{/if}}
+        {{ /members }}
+    </div>
+
+
+
+    <div class="flex flex-col flex-wrap justify-center items-center">
+
+        {{ members where="designation:member" }}
+
+        {{ if first }}
+        <div class="text-md font-bold mt-4">അംഗങ്ങള്‍</div>
+        {{ /if }}
+
+        <div class=" py-1 px-1 text-center ">
+
+            <p class="text-base leading-tight">
+                {{ $member:name_malayalam }}
+            </p>
+
+        </div>
+
+        {{ /members }}
+
+    </div>
+
+</section>
